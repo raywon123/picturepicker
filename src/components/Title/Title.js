@@ -8,7 +8,7 @@ const Title = props => (
         <div className="row">
             <div className="col-lg-12">
                 <h1 className="title">{props.children}</h1>
-                <h3> {str} </h3>
+                <h4> {str} </h4>
             </div>
         </div>
     </div >

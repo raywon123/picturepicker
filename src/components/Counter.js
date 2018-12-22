@@ -1,7 +1,7 @@
 import React from "react";
 
 const Counter = props => (
-    <h4 className="clickcount">Score: {props.point} | Top Score: {props.highPoint} </h4>
+    <p className="clickcount">Score: {props.point} | Top Score: {props.highPoint} </p>
 );
 export default Counter;
 

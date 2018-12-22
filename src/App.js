@@ -3,6 +3,7 @@ import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import friends from "./friends.json";
+import Counter from "./components/Counter";
 import "./App.css";
 
 class App extends Component {
@@ -23,6 +24,7 @@ class App extends Component {
     return (
       <Wrapper>
         <Title>Clicky Game!</Title>
+        <Counter />
         {this.state.friends.map(friend => (
           <FriendCard
             removeFriend={this.removeFriend}

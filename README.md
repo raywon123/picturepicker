@@ -18,6 +18,13 @@ The application render different images to the screen. The goal is to click as m
 ## Technology
 * REACT
 
+## Development
+* $ yarn start
+
+## Deploy to GitHub Page
+* $ npm run deploy
+
+
   
   ## Future Improvement:
 

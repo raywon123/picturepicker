@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/picturepicker/static/js/runtime~main.cfa9aa41.js"
   },
   {
-    "revision": "bf93b537d4cd1cb13c92",
-    "url": "/picturepicker/static/js/main.bf93b537.chunk.js"
+    "revision": "ee6f5ab1dd99a38ce160",
+    "url": "/picturepicker/static/js/main.ee6f5ab1.chunk.js"
   },
   {
     "revision": "fa92c112869d3657d47b",
     "url": "/picturepicker/static/js/1.fa92c112.chunk.js"
   },
   {
-    "revision": "bf93b537d4cd1cb13c92",
+    "revision": "ee6f5ab1dd99a38ce160",
     "url": "/picturepicker/static/css/main.bdd2a6d6.chunk.css"
   },
   {
-    "revision": "528924a18175f0fc2f7f34f8d3d6e752",
+    "revision": "e5c6aa39c9192261135834a89257c810",
     "url": "/picturepicker/index.html"
   }
 ];

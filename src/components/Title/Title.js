@@ -5,8 +5,12 @@ let str = "Click on an image to earn points, but don't click on any more than on
 
 const Title = props => (
     <div>
-        <h1 className="title">{props.children}</h1>
-        <h3> {str} </h3>
-    </div>
+        <div className="row">
+            <div className="col-lg-12">
+                <h1 className="title">{props.children}</h1>
+                <h3> {str} </h3>
+            </div>
+        </div>
+    </div >
 );
 export default Title;

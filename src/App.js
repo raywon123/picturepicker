@@ -2,41 +2,39 @@ import React, { Component } from "react";
 import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
-import friends from "./emoji.json";
+import emoji from "./emoji.json";
 import Counter from "./components/Counter";
 import "./App.css";
 
 class App extends Component {
   
   state = {
-    friends
+    emoji
   };
 
-  removeFriend = id => {
-    const friends = this.state.friends.filter(friend => friend.id !== id);
-    this.setState({ friends });
+  removeEmoji = id => {
+    const emoji = this.state.emoji.filter(emoji => emoji.id !== id);
+    this.setState({ emoji });
   };
 
   addPoint = id => {
-    const friends = this.state.friends.filter(friend => friend.id !== id);
-    this.setState({ friends });
+    const emoji = this.state.emoji.filter(emoji => emoji.id !== id);
+    this.setState({ emoji });
   };
 
   
-
-  // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
     return (
       <Wrapper>
         <Title>Clicky Game!</Title>
         <Counter point={3} highPoint={12}/>
-        {this.state.friends.map(friend => (
+        {this.state.emoji.map(emoji => (
           <FriendCard
             addPoint={this.addPoint}
-            id={friend.id}
-            key={friend.id}
-            name={friend.name}
-            image={friend.image}
+            id={emoji.id}
+            key={emoji.id}
+            name={emoji.name}
+            image={emoji.image}
           />
         ))}
       </Wrapper>

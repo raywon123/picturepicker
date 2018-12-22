@@ -25,7 +25,6 @@ The application render different images to the screen. The goal is to click as m
 * $ npm run deploy
 
 
-  
-  ## Future Improvement:
+## Future Improvement:
 
 * Need to work on the front end. Test.

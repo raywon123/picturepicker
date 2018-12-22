@@ -7,6 +7,21 @@ import emoji2 from "./emoji.json";
 import Counter from "./components/Counter";
 import "./App.css";
 
+/**
+ * Randomize array element order in-place.
+ * Using Durstenfeld shuffle algorithm.
+ */
+function shuffleArray(array) {
+  let i = array.length - 1;
+  for (; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+  return array;
+}
+
 class App extends Component {
 
   // emoji - for rendering
@@ -60,11 +75,13 @@ class App extends Component {
 
 
   render() {
+    const shuffledPosts = shuffleArray(this.state.emoji);
     return (
       <Wrapper>
         <Title>Clicky Game!</Title>
         <Counter point={this.state.point} highPoint={this.state.highPoint} />
-        {this.state.emoji.map(emoji => (
+
+        {shuffledPosts.map(emoji => (
           <FriendCard
             addPoint={this.addPoint}
             id={emoji.id}
@@ -73,9 +90,13 @@ class App extends Component {
             image={emoji.image}
           />
         ))}
+
+
       </Wrapper>
     );
   }
 }
+
+
 
 export default App;

@@ -3,9 +3,11 @@ import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import emoji from "./emoji.json";
-import emoji2 from "./emoji.json";
-import Counter from "./components/Counter";
 import "./App.css";
+
+// emoji - for rendering
+// emoji2 - for keeping score
+let emoji2 = Array.from(emoji);
 
 /**
  * Randomize array element order in-place.
@@ -31,7 +33,8 @@ class App extends Component {
     emoji,
     emoji2,
     point: 0,
-    highPoint: 0
+    highPoint: 0,
+    message: ""
   };
 
 
@@ -44,14 +47,17 @@ class App extends Component {
     if (array.length === 0) {
       // match not found
       console.log("game over");
-      
+
       // reset the score
       const point = 0;
-      this.setState( { point });
+      this.setState({ point });
 
       // reset emoji2 array
       const emoji2 = Array.from(this.state.emoji);
       this.setState({ emoji2 });
+
+      const message = "~~~~ Game Over !!! ~~~~";
+      this.setState({ message });
     }
     else {
       // match found
@@ -69,6 +75,10 @@ class App extends Component {
         const highPoint = point;
         this.setState({ highPoint });
       }
+
+      // define the message
+      const message = "~~~~ Keep going ~~~~~ ";
+      this.setState({ message });
     }
 
   };
@@ -78,8 +88,7 @@ class App extends Component {
     const shuffledPosts = shuffleArray(this.state.emoji);
     return (
       <Wrapper>
-        <Title>Clicky Game!</Title>
-        <Counter point={this.state.point} highPoint={this.state.highPoint} />
+        <Title message={this.state.message} point={this.state.point} highPoint={this.state.highPoint}>Clicky Game!</Title>
 
         {shuffledPosts.map(emoji => (
           <FriendCard

@@ -11,6 +11,12 @@ const Title = props => (
                 <h4> {str} </h4>
             </div>
         </div>
+        <div className="row">
+            <div className="col-lg-12">
+                <h4> {props.message}</h4>
+                <h4 className="clickcount">Score: {props.point} | Top Score: {props.highPoint} </h4>
+            </div>
+        </div>
     </div >
 );
 export default Title;

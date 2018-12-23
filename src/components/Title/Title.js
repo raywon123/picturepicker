@@ -17,6 +17,7 @@ const Title = props => (
                 <h4 className="clickcount">Score: {props.point} | Top Score: {props.highPoint} </h4>
             </div>
         </div>
+        
     </div >
 );
 export default Title;

@@ -89,16 +89,20 @@ class App extends Component {
     return (
       <Wrapper>
         <Title message={this.state.message} point={this.state.point} highPoint={this.state.highPoint}>Clicky Game!</Title>
+        <div className="row">
+          <div className="col-lg-12">
+            {shuffledPosts.map(emoji => (
+              <FriendCard
+                addPoint={this.addPoint}
+                id={emoji.id}
+                key={emoji.id}
+                name={emoji.name}
+                image={emoji.image}
+              />
 
-        {shuffledPosts.map(emoji => (
-          <FriendCard
-            addPoint={this.addPoint}
-            id={emoji.id}
-            key={emoji.id}
-            name={emoji.name}
-            image={emoji.image}
-          />
-        ))}
+            ))}
+          </div>
+        </div>
 
 
       </Wrapper>
